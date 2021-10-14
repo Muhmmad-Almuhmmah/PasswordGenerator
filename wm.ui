@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WM</class>
+ <widget class="QMainWindow" name="WM">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>572</width>
+    <height>235</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Password Generator v1.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="files.qrc">
+    <normaloff>:/app.ico</normaloff>:/app.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Generator</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="3" column="0" colspan="3">
+         <widget class="QPushButton" name="btn_Gen">
+          <property name="text">
+           <string>Generate</string>
+          </property>
+          <property name="shortcut">
+           <string>Space</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QCheckBox" name="ch_Save">
+            <property name="text">
+             <string>Save Password</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineNameOfPass">
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="readOnly">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Name Of Password</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Length</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Type Output</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cmbType">
+            <item>
+             <property name="text">
+              <string>Base64</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Hex</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>90</number>
+            </property>
+            <property name="value">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QLineEdit" name="linePassword">
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string>Random Password</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Saved Passwords</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="tw_Passwords">
+          <property name="editTriggers">
+           <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked</set>
+          </property>
+          <property name="allColumnsShowFocus">
+           <bool>false</bool>
+          </property>
+          <attribute name="headerCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Date</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="files.qrc"/>
+ </resources>
+ <connections/>
+</ui>
